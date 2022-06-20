@@ -82,8 +82,8 @@ class Evo:
         return a
 
     def next_generation(self, generation):
-        generation = self.score(generation)
-        offsprings = self.select(generation)
+        generation_and_score = self.score(generation)
+        offsprings = self.select(generation_and_score)
         generation = self.reproduction(offsprings)
           #generation = generation[generation[:, 0].argsort()]
         #offspring = generation
